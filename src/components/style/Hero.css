@@ -1,0 +1,398 @@
+.hero-wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #041520;
+  color: #ffffff;
+  font-family: sans-serif;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+/* Background layers remaining intact */
+.hero-video-layer {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 1; pointer-events: none;
+}
+
+.hero-shadow-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(4, 21, 32, 0.65); z-index: 2;
+}
+
+/* Navbar container grid alignment constraints */
+.hero-navbar {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background-color: #00111c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-navbar .nav-branding-title{
+    font-size: 14px;
+    font-weight: 800;
+    color: #9ad1f5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Two column side-by-side splitting limits */
+.hero-split-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+  height: calc(100vh - 61px);
+}
+
+.hero-bio-side {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+.hero-wrapper .hero-bio-side p {
+  color: #8e979c !important; 
+  font-size: 18px !important;
+  line-height: 28px !important; 
+  font-weight: 300 !important; 
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.02em !important;
+  margin: 0 !important;
+}
+
+.hero-photo-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Typewriter keyboard cursor settings block */
+.typewriter-cursor {
+  margin-left: 4px;
+  border-right: 3px solid #9ad1f5;
+  animation: cursorBlinkAnimation 0.75s step-end infinite;
+}
+
+@keyframes cursorBlinkAnimation {
+  from, to { border-color: transparent }
+  50% { border-color: #9ad1f5 }
+}
+
+.blobsatelliteone {
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+  width: 45px;
+  height: 40px;
+  border-radius: 55% 45% 40% 60%;
+  background: radial-gradient(circle at 30% 30%, #9ad1f5, #021a30);
+  box-shadow: inset -4px -4px 12px rgba(0,0,0,0.5), inset 4px 4px 10px rgba(255,255,255,0.4), 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.blobsatellitetwo {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #b3ddf8, #021a30);
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.5), inset 2px 2px 6px rgba(255,255,255,0.4);
+  z-index: 1;
+}
+
+.blobframe {
+  position: relative;
+  width: 310px;
+  height: 310px;
+  border-radius: 60% 40% 45% 55% / 40% 60% 40% 60%;
+  background: linear-gradient(135deg, #042944 0%, #011422 100%);
+  padding: 6px; 
+  box-shadow: inset -10px -10px 25px rgba(0, 0, 0, 0.8), inset 10px 10px 30px rgba(255, 255, 255, 0.15), 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(154, 209, 245, 0.15);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.blobgloss {
+  position: absolute;
+  top: 12px;
+  left: 25px;
+  width: 70px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.blobframe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 60% 40% 45% 55% / 40% 60% 40% 60%;
+  background-color: #041520;
+  z-index: 3;
+}
+
+/* ==========================================
+   3. MOBILE MEDIA BREAKPOINTS SCREEN SCALING 
+   ========================================== */
+@media (max-width: 1024px) {
+  .hero-navbar {
+    padding: 20px 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-navbar ul {
+    display: none !important; /* Hides menu lists on mobile to stop layout overlaps */
+  }
+
+  .hero-navbar .nav-branding-title{
+    font-size: 10px;
+    font-weight: 800;
+    color: #9ad1f5;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.hero-wrapper .hero-bio-side h1{
+    font-size: 20px !important;
+    font-weight: 800 !important;
+}
+  
+.hero-wrapper .hero-bio-side p {
+  color: #8e979c !important; 
+  font-size: 14px !important;
+  line-height: 28px !important; 
+  font-weight: 300 !important; 
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.02em !important;
+  margin: 0 !important;
+}
+
+  .hero-split-container {
+    flex-direction: column-reverse !important; 
+    padding: 40px 24px;
+    gap: 36px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .blobframe {
+    width: 220px !important;
+    height: 220px !important;
+    padding: 4px;
+  }
+  
+  .blobframe img {
+    border-radius: 60% 40% 45% 55% / 40% 60% 40% 60%;
+  }
+  
+  .blobsatelliteone {
+    width: 32px; height: 28px; bottom: -8px; left: -12px;
+  }
+  
+  .blobsatellitetwo {
+    width: 18px; height: 18px; top: -4px; right: -4px;
+  }
+
+   .hero-social-footer {
+    bottom: 25px !important; /* Tighter safety padding for small mobile displays */
+    gap: 32px !important; /* Ergonomic touch target finger spaces to prevent misclicks */
+  }
+  
+  .hero-social-footer a svg {
+    width: 22px !important;
+    height: 22px !important;
+    display: none !important; 
+  }
+}
+
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger-icon div {
+  width: 100%;
+  height: 2px;
+  background-color: #abcfd9;
+  border-radius: 2px;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100vh;
+  background-color: #00111c;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 80px 32px;
+  box-sizing: border-box;
+}
+
+.drawer-active {
+  right: 0 !important;
+}
+
+.close-cross-btn {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-size: 32px;
+  color: #8e979c;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-drawer-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  display: block;
+}
+
+/* Activates hamburger view exactly at 991px screen width rules */
+@media (max-width: 998px) {
+  .hero-navbar ul:not(.mobile-drawer-links) {
+    display: none !important;
+  }
+  .hamburger-icon {
+    display: flex !important;
+    width: 24px !important;
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 400px) {
+    /* 1. Safely locks down your compact drawer width dimensions */
+    .mobile-nav-drawer {
+        width: 250px !important;
+    }
+    
+    /* 2. Resizes the touch clickable hamburger line bounds */
+    .hamburger-icon {
+        width: 18px !important;
+        height: 14px !important;
+    }
+
+    .hero-wrapper .hero-bio-side h1 {
+        font-size: 13px !important;
+        font-weight: 800 !important;
+    }
+
+    .hero-navbar .nav-branding-title {
+        flex-direction: column !important; 
+        align-items: flex-start !important; 
+        gap: 4px !important; 
+        font-size: 11px !important;
+    }
+
+    .hero-navbar .nav-branding-title .pipe-accent,
+    .hero-navbar .nav-branding-title span:nth-child(2) {
+        display: none !important;
+    }
+}
+/* ==========================================================
+   UPDATED: CRITICAL SCREEN-CENTERED SOCIAL ENGAGEMENT HUB
+   ========================================================== */
+.hero-social-footer {
+  position: absolute !important;
+  bottom: 30px !important; /* Distance from the bottom edge of your screen */
+  left: 50% !important; /* Positions the start boundary precisely on the mid-line */
+  transform: translateX(-50%) !important; /* Perfectly pulls the absolute middle axis point dead-center */
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 24px !important;
+  z-index: 15; /* Guarantees it sits safely on top of your running background video mask layer */
+}
+
+.hero-social-footer a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+/* Vector icon sizing and slate-gray structural defaults */
+.hero-social-footer a svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: #8e979c !important; /* Preserves your exact paragraph layout text color token */
+  color: #8e979c !important;
+  transition: fill 0.2s ease, color 0.2s ease !important;
+}
+
+/* Illuminates your premium blue accent highlight tone on mouse hover pointer */
+.hero-social-footer a:hover svg {
+  fill: #abcfd9 !important; 
+  color: #abcfd9 !important;
+}
+
+.hero-social-footer a:hover {
+  transform: translateY(-3px) !important; /* Dynamic micro-interaction float lift effect */
+  opacity: 1 !important;
+}
+
+@media (max-width: 360px) {
+  .hero-wrapper .hero-bio-side h1 {
+        font-size: 8px !important;
+        font-weight: 500 !important;
+    }
+}
