@@ -126,7 +126,7 @@ const Hero = () => {
       <div className="hero-social-footer">
         <a href="https://github.com/foziahussaini" target="_blank" rel="noreferrer" title="GitHub"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/fozia-hussaini-19b47738a/" target="_blank" rel="noreferrer" title="LinkedIn"><FaLinkedinIn /></a>
-        <a href="https://discord.com" target="_blank" rel="noreferrer" title="Discord"><FaDiscord /></a>
+        <a href="https://discord.com/channels/@foziahussaini" target="_blank" rel="noreferrer" title="Discord"><FaDiscord /></a>
         <a href="https://twitter.com" target="_blank" rel="noreferrer" title="Twitter"><FaTwitter /></a>
       </div>
 

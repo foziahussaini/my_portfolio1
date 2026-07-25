@@ -74,6 +74,10 @@
   min-width: 300px;
 }
 
+ .hero-wrapper .hero-bio-side h2 {
+        font-size: 40px !important;
+        font-weight: 800 !important;
+    }
 
 .hero-wrapper .hero-bio-side p {
   color: #8e979c !important; 
@@ -173,6 +177,7 @@
   .hero-navbar {
     padding: 20px 32px;
   }
+
 }
 
 @media (max-width: 767px) {
@@ -331,8 +336,8 @@
         height: 14px !important;
     }
 
-    .hero-wrapper .hero-bio-side h1 {
-        font-size: 13px !important;
+    .hero-wrapper .hero-bio-side h2 {
+        font-size: 14px !important;
         font-weight: 800 !important;
     }
 
@@ -391,8 +396,8 @@
 }
 
 @media (max-width: 360px) {
-  .hero-wrapper .hero-bio-side h1 {
-        font-size: 8px !important;
-        font-weight: 500 !important;
+  .hero-wrapper .hero-bio-side h2 {
+        font-size: 14px !important;
+        font-weight: 800 !important;
     }
 }
